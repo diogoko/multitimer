@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>multitimer</title>
+		<title>multiple countdown timer</title>
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<style>
 		
@@ -44,13 +44,18 @@
 		}
 		
 		p {
-			margin: 0;
+			margin: 1em 0;
 		}
 		
 		.note {
 			color: gray;
 			font-style: italic;
 			font-size: smaller;
+		}
+		
+		p.instructions {
+			font-weight: bold;
+			margin: 0;
 		}
 		
 		#startButton {
@@ -144,7 +149,7 @@
 	</head>
 	<body>
 		<div id=dashboard>
-			<p class=note>Times in seconds</p>
+			<p class="note instructions">Times in seconds</p>
 			<ul id=timeList>
 				<li>
 					<input name=time type=number min=1 step=1 onkeypress="addIfNeeded();"/> <i class="fa"></i>
@@ -158,6 +163,8 @@
 			</ul>
 			
 			<button onclick="start();" id="startButton" class=main-button>Start</button>
+			
+			<p class=note>Send feedback to <a href="mailto:diogoko@gmail.com">diogoko@gmail.com</a></p>
 			
 			<p class=note>Get the code at <a href="https://github.com/diogoko/multitimer/">github.com/diogoko/multitimer</a></p>
 		</div>
